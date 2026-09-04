@@ -22,7 +22,7 @@
 
   // configurable options: set `window.BEE_CONFIG = { count: 20, scale: 2, size: 30 }` before script loads
   // NUM_BEES: number of agents to spawn
-  const NUM_BEES = (window.BEE_CONFIG && window.BEE_CONFIG.count) || window.BEE_COUNT || 10;
+  const NUM_BEES = (window.BEE_CONFIG && window.BEE_CONFIG.count) || window.BEE_COUNT || 15;
   // BEE_SCALE: simple multiplier applied to computed bee sizes
   const BEE_SCALE = (window.BEE_CONFIG && window.BEE_CONFIG.scale) || 2; // user-visible multiplier (default 2x)
   // Responsive sizing parameters for bees (size adapts to viewport width)
