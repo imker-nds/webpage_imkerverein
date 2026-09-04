@@ -12,7 +12,7 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;colo
 .site-header{background:linear-gradient(180deg,rgba(0,0,0,0.2),transparent);padding:1rem 0;color:#fff;position:relative;z-index:4}
 .site-header .container{max-width:var(--max-width);margin:0 auto;padding:0 1rem;display:flex;flex-direction:column;align-items:flex-start;gap:.5rem}
 .logo{
-  width:min(350px,100%);
+  width:clamp(180px,52vw,300px);
   height:auto;
   display:block;
   object-fit:contain;
@@ -22,7 +22,7 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;colo
 }
 .tagline{
   margin:0;
-  width:min(350px,100%);
+  width:clamp(220px,78vw,300px);
   font-size:1rem;
   line-height:1.4;
   text-align:left;
@@ -54,9 +54,9 @@ main::before{content:'';position:fixed;inset:0;background:var(--bg-overlay);z-in
 main{position:relative;z-index:3}
 
 @media (max-width:640px){
-  .site-header .container{gap:.5rem}
+  .site-header .container{gap:.5rem;align-items:center}
   .logo,
-  .tagline{width:100%}
+  .tagline{width:clamp(180px,82vw,300px)}
 }
 
 /* accessibility helpers */
