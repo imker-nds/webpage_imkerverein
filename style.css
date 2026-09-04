@@ -1,0 +1,65 @@
+:root{
+  --bg-overlay: rgba(20,12,6,0.15);
+  --card-bg: rgba(255,255,255,0.9);
+  --accent: #c98b00;
+  --text: #222;
+  --muted: #555;
+  --max-width: 860px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--text);background:#f6f2ea}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.site-header{background:linear-gradient(180deg,rgba(0,0,0,0.2),transparent);padding:1rem 0;color:#fff;position:relative;z-index:4}
+.site-header .container{max-width:var(--max-width);margin:0 auto;padding:0 1rem;display:flex;align-items:center;gap:1rem}
+.logo{
+  width: 300px;
+  height: 120px;
+  object-fit:contain;
+  border-radius:6px;
+  background:rgba(222, 222, 222, 0.95);
+  padding:8px;
+}
+.site-header h1{font-size:1.5rem;margin:0; color:rgba(0,0,0,1);font-weight:600}
+.tagline{
+    flex:1 1 auto; /* wächst und füllt den verbleibenden Raum nach rechts */
+    min-width:0; /* wichtig: erlaubt Shrink ohne Overflow */
+    height:120px;
+    font-size:1.0rem; 
+    display:flex;
+    align-items:center;    /* vertikal zentriert */
+    justify-content:flex-start; /* linksbündig/keine horizontale Zentrierung */
+    text-align:left;       /* Textausrichtung für mehrere Zeilen */
+    color:rgb(95, 95, 95);
+    border-radius:6px;
+    background:rgba(222, 222, 222, 0.95);
+    padding:8px
+}
+
+.container{max-width:var(--max-width);margin:1.25rem auto;padding:0 1rem}
+.card{background:var(--card-bg);border-radius:10px;padding:1rem;margin-bottom:1rem;box-shadow:0 8px 22px rgba(0,0,0,0.08)}
+.card h2{margin-top:0;color:#2b2b2b}
+
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* background honeycomb and canvas layering */
+body{
+  background-color:#f7efe5;
+  background-image: url('assets/honeycomb.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#bee-canvas{position:fixed;inset:0;pointer-events:none;z-index:0}
+
+/* darker overlay so text is readable on busy image */
+main::before{content:'';position:fixed;inset:0;background:var(--bg-overlay);z-index:1}
+main{position:relative;z-index:3}
+
+@media (max-width:640px){
+  .site-header .container{gap:.5rem}
+  .logo{width:88px;height:auto;padding:6px}
+}
+
+/* accessibility helpers */
+.card a{color:var(--accent)}
