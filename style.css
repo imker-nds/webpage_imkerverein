@@ -1,5 +1,5 @@
 :root{
-  --bg-overlay: rgba(20,12,6,0.15);
+  --bg-overlay: rgba(71, 61, 4, 0.05);
   --card-bg: rgba(255,255,255,0.9);
   --accent: #c98b00;
   --text: #222;
@@ -40,7 +40,7 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;colo
 
 /* background honeycomb and canvas layering */
 body{
-  background-color:#f7efe5;
+  background-color:#fdcf6b;
   background-image: url('assets/honeycomb.jpg');
   background-size: cover;
   background-position: center center;
